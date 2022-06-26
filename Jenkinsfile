@@ -26,7 +26,10 @@ pipeline {
     }
     stage('codequality'){
         steps{
-       sh 'ls'
+       sh 'mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=saadatou \
+  -Dsonar.host.url=http://34.228.71.22:9000 \
+  -Dsonar.login=sqp_cd4bcbdba83d50177f05d50d7f929e176ae585e8'
         }
     }
   }
