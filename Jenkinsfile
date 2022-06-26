@@ -26,7 +26,7 @@ pipeline {
     }
     stage('codequality'){
         steps{
-       sh '<properties>
+       sh 'ls'
   <sonar.organization>saadatou27</sonar.organization>
   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 </properties>'
